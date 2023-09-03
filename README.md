@@ -1,21 +1,89 @@
-# LearnQuest
 
-Welcome to LearnQuest! 
+<a name="readme-top"></a>
 
-LearnQuest is a note sharing website that allows users to share their notes, comment on notes, upvote their favorite notes, download notes, and generate questions based on the notes.
 
-## Technologies Used
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/bcsamrudh/LearnQuest/blob/main/Images/logo.png">
+    <img src="Images/logo.png" alt="Logo" width="100" height="60">
+  </a>
 
-LearnQuest is built using the following technologies:
+  <h3 align="center">LearnQuest</h3>
 
-- **Django** : Django is a high-level Python web framework that provides a clean and efficient way to build web applications.
-- **Django-unicorn** : Django-unicorn is a Django library that integrates with the Unicorn library to provide real-time, reactive components in Django applications.
-- **Bootstrap** : Bootstrap is a popular CSS framework that provides pre-styled components and a responsive grid system.
-- **HTML** : HTML is the standard markup language used to structure the content of web pages.
-- **CSS** : CSS is used to style the HTML elements and provide a visually appealing design.
-- **JavaScript** : JavaScript is a programming language that adds interactivity and dynamic behavior to web pages.
-- **Google PALM API** : The Google PALM API is used to generate questions based on the content of the notes.
+  <p align="center">
+    Your Ultimate Study Hub 📖 Share, Discuss, and Generate Questions with AI-powered convenience. Elevate your learning game with ease!
+    <br />
+    <a href="https://github.com/bcsamrudh/LearnQuest"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/bcsamrudh/LearnQuest/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/bcsamrudh/LearnQuest/issues">Request Feature</a>
+  </p>
+</div>
 
+
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#setting-up-the-project">Setting Up the Project</a>
+    </li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
+
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+<img src="Images/NOTES_LIST Page.png" alt="Website Image">
+
+LearnQuest is a website that helps students share study notes and generate questions based on the notes using AI. It allows students to upload their notes, which are then used by AI to generate questions. Students can also view and comment on each other's notes, which helps them to learn from each other and improve their understanding of the material.
+
+LearnQuest provides the following features:
+
+- **Note Sharing**: Users can upload and share their notes with the community.
+- **Comments**: Users can comment on notes to provide feedback or ask questions.
+- **Upvoting**: Users can upvote their favorite notes to show appreciation.
+- **Note Download**: Users can download notes for offline access.
+- **Question Generation**: Users can generate questions based on the content of the notes.
+- **Accessible UI**: The website is made accessible, so that everybody can take advantage of the website.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+### Built With
+
+This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+
+* ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
+* ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+* ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+* ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+* ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+* **Django-unicorn** : Django-unicorn is a Django library that integrates with the Unicorn library to provide real-time, reactive components in Django applications.
+* **Google PALM API** : The Google PALM API is used to generate questions based on the content of the notes.
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- GETTING STARTED -->
 ## Setting Up the Project
 
 To set up the LearnQuest project on your local machine, follow these steps:
@@ -72,29 +140,72 @@ To set up the LearnQuest project on your local machine, follow these steps:
 
 1. Open your web browser and visit `http://localhost:8000` to access LearnQuest.
 
-## Features
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-LearnQuest provides the following features:
 
-- **Note Sharing**: Users can upload and share their notes with the community.
-- **Comments**: Users can comment on notes to provide feedback or ask questions.
-- **Upvoting**: Users can upvote their favorite notes to show appreciation.
-- **Note Download**: Users can download notes for offline access.
-- **Question Generation**: Users can generate questions based on the content of the notes.
-- **Accessible UI**: The website is made accessible, so that everybody can take advantage of the website.
 
-## Contributing 😊
+<!-- USAGE EXAMPLES -->
+## Usage
 
-If you're interested in contributing to LearnQuest, you're welcome to submit pull requests and issues.
+## Sign UP on the Website
+<img src="Images/SIGN_UP Page.png" alt="Sign Up page of the Website">
 
+## Browse through a List of Notes Uploaded
+<img src="Images/NOTES_LIST Page.png" alt="Notes List Page">
+
+## View a Note In Detail
+<img src="Images/NOTES_VIEW Page.png" alt="Notes View Page">
+
+## Generate Question Based on the notes
+<img src="Images/QUESTIONS_VIEW Page.png" alt="Questions View Page">
+
+## Sign In Page of the Website
+<img src="Images/SIGN_IN Page.png" alt="Questions View Page">
+
+## About Page of the Website
+<img src="Images/ABOUT Page.png" alt="Questions View Page">
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- LICENSE -->
 ## License
 
-LearnQuest is released under the [MIT License](https://opensource.org/licenses/MIT). Feel free to use, modify, and distribute the code as per the terms of the license.
+Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-## Acknowledgements
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
 
 - Django: [https://www.djangoproject.com/](https://www.djangoproject.com/)
 - Django-unicorn: [https://django-unicorn.readthedocs.io/](https://django-unicorn.readthedocs.io/)
 - Bootstrap: [https://getbootstrap.com/](https://getbootstrap.com/)
-- Cohere API: The Cohere API is used for question generation. [https://www.cohere.ai/](https://www.cohere.ai/)
+- Google PALM API: The PALM API is used for question generation. [https://makersuite.google.com/](https://makersuite.google.com/)
 - Django Snippets: I used there code snippets to make my development faster [https://djangosnippets.org/](https://djangosnippets.org/)
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
