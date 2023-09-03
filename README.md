@@ -147,7 +147,7 @@ To set up the LearnQuest project on your local machine, follow these steps:
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-## Sign UP on the Website
+## Sign-Up on the Website
 <img src="Images/SIGN_UP Page.png" alt="Sign Up page of the Website">
 
 ## Browse through a List of Notes Uploaded
@@ -159,7 +159,10 @@ To set up the LearnQuest project on your local machine, follow these steps:
 ## Generate Question Based on the notes
 <img src="Images/QUESTIONS_VIEW Page.png" alt="Questions View Page">
 
-## Sign In Page of the Website
+## Upload Notes
+<img src="Images/UPLOAD_NOTES Page.png" alt="Sign Up page of the Website">
+
+## Sign-In Page of the Website
 <img src="Images/SIGN_IN Page.png" alt="Questions View Page">
 
 ## About Page of the Website
