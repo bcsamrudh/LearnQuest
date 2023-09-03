@@ -8,13 +8,13 @@ LearnQuest is a note sharing website that allows users to share their notes, com
 
 LearnQuest is built using the following technologies:
 
-- Django: Django is a high-level Python web framework that provides a clean and efficient way to build web applications.
-- Django-unicorn: Django-unicorn is a Django library that integrates with the Unicorn library to provide real-time, reactive components in Django applications.
-- Bootstrap: Bootstrap is a popular CSS framework that provides pre-styled components and a responsive grid system.
-- HTML: HTML is the standard markup language used to structure the content of web pages.
-- CSS: CSS is used to style the HTML elements and provide a visually appealing design.
-- JavaScript: JavaScript is a programming language that adds interactivity and dynamic behavior to web pages.
-- Google PALM API: The Google PALM API is used to generate questions based on the content of the notes.
+- **Django** : Django is a high-level Python web framework that provides a clean and efficient way to build web applications.
+- **Django-unicorn** : Django-unicorn is a Django library that integrates with the Unicorn library to provide real-time, reactive components in Django applications.
+- **Bootstrap** : Bootstrap is a popular CSS framework that provides pre-styled components and a responsive grid system.
+- **HTML** : HTML is the standard markup language used to structure the content of web pages.
+- **CSS** : CSS is used to style the HTML elements and provide a visually appealing design.
+- **JavaScript** : JavaScript is a programming language that adds interactivity and dynamic behavior to web pages.
+- **Google PALM API** : The Google PALM API is used to generate questions based on the content of the notes.
 
 ## Setting Up the Project
 
