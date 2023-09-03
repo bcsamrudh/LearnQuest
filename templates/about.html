@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %} About LearnQuest {%  endblock %}
+{% block content %}
+<div class="container mt-5">
+
+  <h1>About LearnQuest</h1>
+
+  <p>
+    LearnQuest is a platform for students to collaborate and learn together. Here, you can share your class notes, access notes shared by other students, and get AI-generated practice questions on those notes.
+  </p>
+  <img src="{% static 'about.jpeg'  %}" alt="Love to Learn " width="600" height="300">
+
+  <h2>Key Features</h2>
+
+  <ul>
+    <li>
+      <b>Share Notes</b> 
+      - Upload your handwritten or typed notes for any subject and make them available for other students to view. This allows you to help others by sharing your understanding of class topics.
+    </li>
+  
+    <li>
+      <b>Access Shared Notes</b>
+      - Browse through notes shared by students of your classes and institutions. Find explanations and perspectives to complement your own notes. Accessing shared notes can enhance your overall understanding.
+    </li>
+  
+    <li>
+      <b>Practice Questions</b>
+      - Use our AI system to instantly generate practice questions based on any shared notes. The AI uses the notes and creates relevant questions to test your knowledge on those topics.
+    </li>
+  </ul>
+</div>
+<footer>
+  <div class='container'>
+  <div class='row'>
+      <div class='col-md-12'>
+          <ul>
+              <p>Built by : <a  href="https://github.com/bcsamrudh">B C Samrudh </a></p>
+          </ul>
+      </div>
+  </div>
+  </div>
+</footer>
+{% endblock %}

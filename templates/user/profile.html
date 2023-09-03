@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}Profile{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    
+    <div class="row d-flex justify-content-center">
+        
+        <div class="col-md-10">
+            
+            <div class="card p-5 py-6">
+                {% if user.image %}
+                <div class="text-center">
+                    <img src="{{user.image.url}}" width="100">
+                </div>
+                {% endif %}
+                <div class="text-center mt-3">
+                    <h5 class="mt-2 mb-0">{{user.name}}</h5>
+                    <span><strong>Username:</strong>{{user.username}}</span>
+                    <h6>Joined:<date>{{user.date_joined|date}}</date></h6>
+                    {% if user.bio %}
+                    <div class="px-4 mt-1">
+                        <h5 class="fonts">Contribution Score : {{user.consistency_score}}</h5>
+                        <p class="fonts">{{user.bio}}</p>
+                    </div>  
+                    {% endif %}                  
+                    <div class="buttons">
+                        {% if show_button %}
+                            <button onclick="delete_profile('{{request.user.id}}')" class="btn btn-dark px-6"><i class="bi bi-pencil-square"></i> Delete Account</button>
+                        {% endif %}
+                    </div>
+                    {% if mynotes %}
+                    <div class="table-div">
+                        <h5>Notes Published </h5>
+                        <table>
+                            <tr>
+                            <th>Date</th>
+                            <th>Title</th> 
+                            <th>Subject</th>
+                            </tr>
+                            {% for notes in mynotes %}
+                                <tr>
+                                <td>{{notes.date_uploaded | date}}</td>
+                                <td><a href="{% url 'note' slug=notes.slug %}">{{notes.title}}</a></td>
+                                <td>{{notes.subject}}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>  
+                    </div>
+                    {% endif %}
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>  
+<script>
+    function delete_profile(id){
+      var result = confirm("Are you sure you want to delete your Profile?");
+      if(result){
+      window.location.href = '/user/delete/' + id;
+      }
+    }
+</script>    
+{% endblock %}

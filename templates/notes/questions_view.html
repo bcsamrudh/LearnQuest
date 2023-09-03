@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block head %} AI Generated Questions {% endblock %}
+
+{% block content %}
+{% load static %}
+<div class="post-card">
+    <h2 class="post-title">AI Generated questions on {{topic}} of subject {{subject}}</h2>
+    <p id="myText">{{data | linebreaks}}</p>
+</div>
+{% endblock %}

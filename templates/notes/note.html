@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load unicorn  %}
+
+{% block head %}View Notes{% endblock %}
+
+{% block content %}
+    {% load static %}   
+    <div class="container">
+      <div class="article-buttons">
+        {% if note.user.username == request.user.username %}
+        {% comment %} <form action={% url 'edit_notes' slug=note.slug %} enctype="multipart/form-data">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-outline-success "><i class="bi bi-trash"></i> Edit</button>   
+        </form> {% endcomment %}
+        <button  type="submit" onclick="delete_note('{{note.slug}}')" class="btn btn-danger"><i class="bi bi-pencil-square"></i> Delete</button>
+        {% endif %}
+      </div>
+      <div class="row">
+        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+          <h1 class="post-title">{{ note.title }} - <span class="post-title">{{ note.subject }}</span></h1>
+    <div class="list-inline-item badge bg-dark">
+      {% if note.tags %}
+        <span class="text-white">{{note.tags}}</span>
+      {% endif %}
+    </div>
+    <div class="post-meta">
+      By <a href="{% url 'profile' username=note.user.username %}">{{ note.user.username }}</a> on {{ note.date_uploaded |date}}
+    </div>
+    <div class="download-button">
+      <button class="btn btn-dark" onclick="download()"><i class="bi bi-download"></i> Download Notes </button>
+    </div>
+    <div class="post-content">
+      {{ note.description|linebreaks }}
+      {% if filetype == "PDF" %}
+      <embed
+      src="{{note.notesfile.url}}"
+      type="application/pdf"
+      width="100%"
+      height="800"
+    />
+      {% else %}
+      <h4 class="text-black">File Type Note supported</h4>
+
+      {%endif%}
+    </div>
+    </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"> 
+          <div class="article-buttons">
+              <button data-id = "{{ note.id }}" class=" btn btn-dark" id="upvote"><i class="bi bi-caret-up-square"></i> Upvote</button>
+              <span id="upvote-count" class="upvote-count mt-3 pl-2">{{note.total_upvotes}}</span>
+          </div>  
+          <br> 
+          <div class="comments">
+            {% unicorn 'comments' noteID=note.id %}
+          </div>
+        </div>
+    </div>
+    <a href="{% url 'generate_questions' topic=note.title subject=note.subject %}"><button id="question_button" class="btn btn-dark float" onclick="showloader()">AI Question Generator</button></a>
+    <script src="{% static 'utilities.js' %}"></script>
+    <script>
+      function delete_note(slug){
+        var result = confirm("Are you sure you want to delete this Note?");
+        if(result){
+        window.location.href = '/notes/delete_notes/'+slug;
+        }
+      };
+      function download(){
+        window.open("{{note.notesfile.url}}");
+      };
+      function showloader(){
+        const button = document.getElementById('question_button');
+        button.innerText = "Loading Questions...."
+      };
+    </script>
+{% endblock %}

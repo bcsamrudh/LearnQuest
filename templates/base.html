@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% load unicorn %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block head %} {% endblock %}</title>
+        {% load static %}
+        {% unicorn_scripts %}
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="{% static 'style.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    </head>
+    <body>
+      {% csrf_token %}
+      <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark fixed-top" data-bs-theme="dark">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'notes' search=0 %}">
+              <img src="{% static 'logo.png'%}" alt="LearnQuest" width="100" height="30">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                {% if request.user.is_authenticated %}
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="{% url 'upload_notes' %}">Share Notes</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="{% url 'notes' search=0 %}">Notes Repository</a>
+                    </li>
+                {% endif %}
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="{% url 'about' %}">About</a>
+                </li>
+              </ul>
+                {% if request.user.is_authenticated %}
+                    <div class="dropdown">
+                      <a class="btn dropdown-toggle" href="#" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        {% if request.user.image %}
+                        <img src="{{request.user.image.url}}" class="rounded-circle me-2" width="32" height="32" alt="{{request.user.username}}">
+                        {% endif %}
+                        <b class="caret">{{request.user.username}}</b>
+                      </a>
+                  
+                      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                        <li><a class="dropdown-item" href="{% url 'profile' user.username %}"><i class="bi bi-gear-fill"></i> Account</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="{% url 'logout' %}"><i class="bi bi-box-arrow-right"></i></i> Sign-out</a></li>
+                      </ul>
+                    </div>
+                  {% else %}
+                  <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="{% url 'signup' %}">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="{% url 'signin' %}">Sign In</a>
+                    </li>
+                {% endif %}
+              </ul>
+            </div>
+          </div>
+      </nav>
+      <div class="container-fluid-padd">
+        {% for message in messages %}
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">  
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        {% endfor %}
+        <script id="aioa-adawidget" src="{{ AIOA_URL }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        {%block content %}
+        {% endblock %}
+      </div>
+    </body>
+</html>

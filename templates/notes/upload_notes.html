@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}Upload Notes{% endblock %}
+
+{% block content %}
+<div class="alert alert-info text-center">
+   Please Upload a <strong>"PDF Document"</strong>
+</div>
+<div class="container">
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+      <form method="POST" action="{% url 'upload_notes' %}" class="form-group" enctype="multipart/form-data">
+        <h3>Upload your Notes to the Notes Repository</h3>
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="btn btn-dark form-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock%}

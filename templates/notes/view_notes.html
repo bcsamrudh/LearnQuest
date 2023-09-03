@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+
+{% block head %}View Notes {% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-7">
+      <h1 class="text-center">Notes</h1>
+      <div class="post-list">
+        {% if page_obj.object_list %}
+          {% for note in page_obj.object_list %}
+          <div class="post-card">
+              <div class="post-content">
+                <h2 class="post-title">{{note.title}} - <span style="font-size:20px">{{note.subject}}</span></h2>
+                <p class="author">
+                  {% if note.user.image %}
+                  <img src="{{ note.user.image.url }}" class="author-img">
+                  {% endif %}
+                  <a class="link" href="{% url 'profile' username=note.user.username %}">
+                    {{note.user.username}}  
+                  </a>
+                </p>
+                <div id="{{ note.id }}">Upvotes : {{ note.total_upvotes}}</div>
+                <p class="post-excerpt">{{note.excerpt}}</p>     
+              </div> 
+              <a href="{% url 'note' slug=note.slug %}"><button class="btn btn-read btn-dark" >View</button></a>
+          </div>
+          {% endfor %}
+        {% else %}
+          <div class="post-card">
+            <div class="post-content">
+              <h2 class="post-title text-center">No Results</h2>
+            </div> 
+          </div>
+        {% endif %}
+      </div>
+      <center>
+        {%if page_obj.has_previous %} 
+            <a href="?page={{page_obj.previous_page_number}}"><</a> 
+        {% endif %}
+        <span>{{page_obj.number}}</span> 
+        
+        {%if page_obj.has_next %} 
+            <a href="?page={{page_obj.next_page_number}}">></a> 
+        {% endif %}
+      </center>
+    </div>
+    <div class="col-5">
+      <h2 class="text-center" style="padding-bottom:10px">Filter Notes</h2>
+        <form method="post" action="{% url 'notes' search=1 %}">
+          {% csrf_token %}
+          <div class="form-row">
+              <div class="form-group col-12">
+                  <div class="input-group">
+                      <input class="form-control py-2 border-right-0 border" type="search" name="title_contains" placeholder="Title contains..." />
+                      <span class="input-group-append">
+                          <div class="input-group-text bg-transparent">
+                            <span class="bi-search">
+                          </div>
+                      </span>
+                  </div>
+              </div>        
+          </div>
+          <div class="form-row">
+              <div class="form-group col-12">
+                  <div class="input-group">
+                      <input class="form-control py-2 border-right-0 border" type="search" name="user" placeholder="Author...." />
+                      <span class="input-group-append">
+                          <div class="input-group-text bg-transparent">
+                            <span class="bi-search">
+                          </div>
+                      </span>
+                  </div>
+              </div>        
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="date_query">Published Date</label>
+              <input type="date" class="form-control" id="date_query" name="date_query">
+            </div>
+            <div class="form-group col-md-4" style="padding-bottom:10px">
+              <label for="subject">Subject</label>
+              <input type="text" class="form-control" id="subject" name="subject">
+            </div>
+            <div class="form-group col-md-4" style="padding-bottom:10px">
+              <label for="tags">Tags</label>
+              <input type="text" class="form-control" id="tags" name="tags">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-dark">Search</button>
+        </form>
+    </div>
+  </div>
+<div>
+  <footer>
+    <div class='container'>
+    <div class='row'>
+        <div class='col-md-12'>
+            <ul>
+                <p>Built by : <a  href="https://github.com/bcsamrudh">B C Samrudh </a></p>
+            </ul>
+        </div>
+    </div>
+    </div>
+</footer>
+{% endblock%}

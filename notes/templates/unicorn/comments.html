@@ -1,0 +1,18 @@
+<div>
+    <div class="comments">  
+        <textarea u:model.lazy="comment" placeholder="write a comment..." class="comment-input">
+        </textarea>
+        <br>
+        <button u:click="submit" id="comment-button" type="submit" class="btn btn-dark"><i class="bi bi-chat-fill"></i> Comment</button> 
+        <h2>Comments</h2>
+        {% for comment in comments %}
+            <div class="post-card">
+                {% if comment.author_id.image %}
+                    <img src="{{ comment.author_id.image.url }}" class="author-img">
+                {% endif %}
+                <p class="meta">{{ comment.author_id.username }} • {{ comment.date |timesince}}</p>
+                <p>{{ comment.comment }}</p> 
+            </div>     
+        {% endfor %}
+    </div>
+</div>
