@@ -48,7 +48,9 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
+<p align="center">
+    <a href="https://www.youtube-nocookie.com/embed/i71r4OBmgIc?si=jHJ0XgSd-IZIZKmA">Watch The Demo Video</a>
+</p>
 <img src="Images/NOTES_LIST Page.png" alt="Website Image">
 
 LearnQuest is a website that helps students share study notes and generate questions based on the notes using AI. It allows students to upload their notes, which are then used by AI to generate questions. Students can also view and comment on each other's notes, which helps them to learn from each other and improve their understanding of the material.
@@ -60,7 +62,7 @@ LearnQuest provides the following features:
 - **Upvoting**: Users can upvote their favorite notes to show appreciation.
 - **Note Download**: Users can download notes for offline access.
 - **Question Generation**: Users can generate questions based on the content of the notes.
-- **Accessible UI**: The website is made accessible, so that everybody can take advantage of the website.
+- **Accessible UI**: The website is made accessible so that everybody can take advantage of the website.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
