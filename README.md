@@ -13,13 +13,6 @@
 
   <p align="center">
     Your Ultimate Study Hub 📖 Share, Discuss, and Generate Questions with AI-powered convenience. Elevate your learning game with ease!
-    <br />
-    <a href="https://github.com/bcsamrudh/LearnQuest"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/bcsamrudh/LearnQuest/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/bcsamrudh/LearnQuest/issues">Request Feature</a>
   </p>
 </div>
 
@@ -38,9 +31,6 @@
     <li>
       <a href="#setting-up-the-project">Setting Up the Project</a>
     </li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -78,7 +68,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 * ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 * ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 * **Django-unicorn** : Django-unicorn is a Django library that integrates with the Unicorn library to provide real-time, reactive components in Django applications.
-* **Google PALM API** : The Google PALM API is used to generate questions based on the content of the notes.
+* **Google Gemini API** : The Google Gemini API is used to generate questions based on the content of the notes.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -170,47 +160,3 @@ To set up the LearnQuest project on your local machine, follow these steps:
 ## About Page of the Website
 <img src="Images/ABOUT Page.png" alt="Questions View Page">
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-- Django: [https://www.djangoproject.com/](https://www.djangoproject.com/)
-- Django-unicorn: [https://django-unicorn.readthedocs.io/](https://django-unicorn.readthedocs.io/)
-- Bootstrap: [https://getbootstrap.com/](https://getbootstrap.com/)
-- Google PALM API: The PALM API is used for question generation. [https://makersuite.google.com/](https://makersuite.google.com/)
-- Django Snippets: I used there code snippets to make my development faster [https://djangosnippets.org/](https://djangosnippets.org/)
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
